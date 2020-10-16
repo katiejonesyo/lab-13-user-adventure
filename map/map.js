@@ -4,10 +4,14 @@ const ul = document.querySelector('ul');
 //every quest on page as a link
 
 quests.forEach(quest => {
+    const li = document.createElement('li');
     const link = document.createElement('a');
 
-    link.textContent = quest.title;
+    li.appendChild(link);
 
-    ul.append(link);
+    link.textContent = quest.title;
+    link.href = `/quest/?id=${quest.id}`;
+
+    ul.append(li);
     
 });
