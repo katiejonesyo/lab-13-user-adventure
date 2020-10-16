@@ -5,10 +5,23 @@ img {
 body {
     background-image: url(https://wallpaperaccess.com/full/429962.jpg);
     background-repeat: no-repeat;
+    justify-content: center;
+    text-align: center;
 }
 
 div {
     background-color: cornsilk;
-    width: 250px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
+main {
+    background-color: cornsilk;
+    margin-top: 20%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}

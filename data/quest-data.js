@@ -70,16 +70,53 @@ const path2 = {
         description: 'You disguisde yourselves and make a break for it',
         result: `
             You come up with a sneaky idea to disguise yourselves as tree branches. They'll never notice you as they are too busy looking for Mushrooms.
-            You manage to sneak past jsut in time and youre awarded 90 flowers.
+            You manage to sneak past jsut in time and youre awarded 90 .
         `,
         hp: 0,
         flower: 90
     }]
 };
 
+
+const family = {
+    id: 'family',
+    title: 'Mush\'s Family',
+    map: {
+        top: '31%',
+        left: '5%'
+    },
+    prerequisites: ['path1', 'path2'],
+    image: 'mushfam.jpg',
+    audio: 'yay.wav',
+    description: `
+        You can see Mush's family off in the distance! You realize how close you are when suddenly you get caught in a hunter's trap! 
+        Mush goes flying while you are stuck in the net. What do you do?
+    `,
+    choices: [{
+        id: 'chew',
+        description: 'Chew Through Net',
+        result: 'You break free!',
+        hp: 0,
+        flower: 40
+    }, {
+        id: 'roll',
+        description: 'You tell Mush to roll to their family and you will die in the net in his honor.',
+        result: 'Well you died so here is 50 hp damage',
+        hp: -50,
+        flower: 0
+    }, {
+        id: 'rope',
+        description: 'There is a mystery rope. Pull it?',
+        result: 'You manage to pull the rope and break free leding you to Mush and their family. ',
+        hp: 35,
+        flower: 0
+    }]
+};
+
 const quests = [
     path1, 
-    path2
+    path2,
+    family
 ];
 
 export default quests;

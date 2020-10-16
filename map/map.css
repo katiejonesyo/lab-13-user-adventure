@@ -1,6 +1,7 @@
 body {
     justify-content: center;
     text-align: center;
+    background-image: url(../assets/map.jpg)
 
 }
 
@@ -9,3 +10,22 @@ img {
     width: 25px;
 }
 
+
+main {
+    background-color: cornsilk;
+    margin-top: 20%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
+div {
+    background-color: cornsilk;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    
+}

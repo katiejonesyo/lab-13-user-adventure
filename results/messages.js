@@ -1,17 +1,17 @@
 export const aliveFlowerMessages = {
-    poor: 'you live as a poor beggar',
-    modest: 'you live in a modest hut farming the earth',
-    rich: 'you and your whole family live in small castle in luxury',
+    poor: 'No flowers but atleast you made a new buddy',
+    modest: 'Not bad! Some flowers and a new friend!',
+    rich: 'You have ALL of the flowers and Mush as a new friend.',
 };
 
 export const deadFlowerMessages = {
-    poor: 'you leave nothing for your family',
-    modest: 'you leave enough to buy your family a turkey dinner at the pub',
-    rich: 'your family builds a monument in your honor'
+    poor: 'you died :/',
+    modest: 'you died :/',
+    rich: 'you died :/,'
 };
 
 export const hpMessages = {
     dead: 'you are dead',
     frail: 'you retire in frail health',
-    healthy: 'you retire and live a long life in good health',
+    healthy: 'you have great health and hopefully some flowers',
 };
