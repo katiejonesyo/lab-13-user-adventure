@@ -1,6 +1,6 @@
 const path1 = {
     id: 'path1',
-    title: 'Path 1',
+    title: 'Bridge',
     map: {
         top: '89%',
         left: '44%'
@@ -38,7 +38,7 @@ const path1 = {
 
 const path2 = {
     id: 'path2',
-    title: 'Path 2',
+    title: 'Dirt Path',
     map: {
         top: '17%',
         left: '37%'
