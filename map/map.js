@@ -1,17 +1,28 @@
-import quests from '../data.js';
+import { getUser } from '../data/api.js';
+import quests from '../data/quest-data.js';
+import loadProfile from '../common/load-profile.js';
+import createQuestLink from './create-quest-link.js';
+import createCompletedQuest from './create-completed-quest.js';
+import hasCompletedAllQuests from './has-completed-all-quests.js';
+import isDead from '../common/is-dead.js';
 
-const ul = document.querySelector('ul');
-//every quest on page as a link
+loadProfile(); 
+const user = getUser();
 
-quests.forEach(quest => {
-    const li = document.createElement('li');
-    const link = document.createElement('a');
+if (isDead(user) || hasCompletedAllQuests(quests, user)) {
+    window.location = '../results';
+}
 
-    li.appendChild(link);
+const nav = document.getElementById('quests');
 
-    link.textContent = quest.title;
-    link.href = `/quest/?id=${quest.id}`;
-
-    ul.append(li);
-    
-});
+for (let i = 0; i < quests.length; i++) {
+   const quest = quests[i];
+    let questDisplay = null;
+    if (user.completed[quest.id]) {
+        questDisplay = createCompletedQuest(quest);
+    }
+    else {
+        questDisplay = createQuestLink(quest);
+    }
+    nav.appendChild(questDisplay);
+}
